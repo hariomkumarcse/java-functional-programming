@@ -1,6 +1,6 @@
-interface IOp
+interface IOp<T>
 {
-	int add(int a, int b);
+	T add(T a,T b);
 }
 //class ClsOp implements IOp
 
@@ -8,8 +8,8 @@ class InnerClsDemoWithoutCls
 {
 	public static void main(String args[])
 	{
-		IOp ref = new IOp() {
-	public int add(int a, int b)
+		IOp<Integer> ref = new IOp<>() {
+	public Integer add(Integer a, Integer b)
 	{
 		return a+b;
 	}
